@@ -3,14 +3,15 @@ package simple
 import "fmt"
 
 func SayHi(person string) string { //public function
-	return fmt.Sprintf("Hi %s", person)
+	return fmt.Sprintf("Hi %s from public", person)
 }
 
 func sayHi(person string) string { //private function
-	return fmt.Sprintf("Hi %s", person)
+	return fmt.Sprintf("Hi %s from private", person)
 }
 
 func main() {
-	fmt.Println(sayHi("Henryhai from private"))
-	fmt.Println(SayHi("Henryhai from public"))
+	name := "Henry Hai"
+	fmt.Println(sayHi(name))
+	fmt.Println(SayHi(name))
 }

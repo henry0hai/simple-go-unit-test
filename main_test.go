@@ -2,9 +2,10 @@ package simple
 
 import "testing"
 
-func TestSayHi(t *testing.T) {
-	expected := "Hi Henryhai from private"
-	greeting := sayHi("Henryhai from private")
+func TestSayHiPrivate(t *testing.T) {
+	name := "Henry Hai"
+	expected := "Hi Henry Hai from private"
+	greeting := sayHi(name)
 	if greeting != expected {
 		t.Errorf("Greeting was incorrect, got: '%s', want: '%s'", greeting, expected)
 	}
