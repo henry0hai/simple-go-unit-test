@@ -2,4 +2,14 @@
 
 ## Simple unit test
 
-- Run go test ./...
+- Run:
+
+```sh
+go test ./...
+```
+
+- Run with fuzz test:
+
+```sh
+go test -fuzz FuzzReverse -fuzztime 30s
+```
