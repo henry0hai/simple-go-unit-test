@@ -14,6 +14,15 @@ func TestSayHiPrivate(t *testing.T) {
 	}
 }
 
+func TestSayHiPublic(t *testing.T) {
+	name := "Henry Hai"
+	expected := "Hi Henry Hai from public"
+	greeting := SayHi(name)
+	if greeting != expected {
+		t.Errorf("Greeting was incorrect, got: '%s', want: '%s'", greeting, expected)
+	}
+}
+
 func FuzzReverse(f *testing.F) {
 	testcases := []string{"Hello, world", " ", "!12345"}
 	for _, tc := range testcases {
